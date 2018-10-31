@@ -25,7 +25,7 @@ body {
 
 h2 {
   text-align: center;
-  margin: 0 0 36px 0;
+  margin: 0 0 48px 0;
   font-size: 48px;
   font-weight: bold;
   color: #51adcb;
@@ -35,16 +35,18 @@ h2 > span {
   color: #fb7626;
 }
 
+section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
 /* ---------- header ---------- */
 .header {
   position: absolute;
   z-index: 10;
-  top: 32px;
-  height: 60px;
+  top: 40px;
   width: 100%;
   color: #fff;
-  /* background-color: #fff;
-  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .header-inner {
@@ -67,38 +69,27 @@ h2 > span {
 
 .header-right__sections {
   display: flex;
-  line-height: 60px;
+  margin-top: 10px;
 }
 
 .header-right__sections li {
   font-size: 20px;
   font-weight: bold;
-  margin: 0 20px;
+  margin-left: 20px;
   cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
 }
 
-.header-right__language-btn {
-  border: 1px solid #fff;
-  height: 30px;
-  padding: 2px 12px;
-  border-radius: 25px;
-  margin-top: 10px;
-  margin-left: 16px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.header-right__language-btn img {
-  width: 20px;
-  vertical-align: sub;
-  margin-top: 5px;
+.header-right__sections li:nth-child(2) {
+  background-color: #fb7626;
 }
 
 /* ---------- jumbotron ---------- */
 .jumbotron {
   position: relative;
-  background-color: #fff;
   height: 100vh;
+  padding: 0;
 }
 
 .jumbotron-inner {
@@ -109,15 +100,6 @@ h2 > span {
   left: 20px;
   right: 20px;
 }
-
-/* .jumbotron__heading {
-  position: absolute;
-  bottom: -17px;
-  left: -6px;
-  font-size: 160px;
-  font-weight: bold;
-  color: #fff;
-} */
 
 .jumbotron__content {
   position: absolute;
@@ -134,31 +116,8 @@ h2 > span {
 .jumbotron__content__catchphrase {
   color: #fff;
   font-size: 28px;
-  line-height: 40px;
+  line-height: 1.6;
   font-weight: bold;
-}
-
-.jumbotron__content__spec-btn {
-  position: relative;
-  margin-top: 52px;
-}
-
-.jumbotron__content__spec-btn a {
-  position: absolute;
-  right: 0;
-  background-color: #f57121;
-  display: inline-block;
-  padding: 20px 40px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  border-radius: 30px;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-  transition: background-color .5s ease-out;
-}
-
-.jumbotron__content__spec-btn a:hover {
-  background-color: #da6c29;
 }
 
 .jumbotron__scroll {
@@ -174,6 +133,7 @@ h2 > span {
   position: absolute;
   left: -28px;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .jumbotron__scroll-inner {
@@ -219,15 +179,9 @@ h2 > span {
 }
 
 /* ---------- about ---------- */
-.about {
-  background-color: #fff;
-  padding: 60px 0 80px;
-}
-
-.about__text-card {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
-  padding: 48px 80px;
+.about__text {
+  padding: 36px 48px 48px;
+  box-sizing: border-box;
   max-width: 640px;
   margin: auto;
   font-size: 20px;
@@ -236,14 +190,49 @@ h2 > span {
   line-height: 1.5;
 }
 
-/* ---------- wallets ---------- */
-
-/* ---------- servicies ---------- */
-.services {
-  background-color: #fff;
-  padding: 60px 0;
+/* ---------- spec ---------- */
+.spec__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 640px;
+  margin: auto;
+  padding: 40px 40px 40px 60px;
+  box-sizing: border-box;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
+.spec__content__text {
+  color: #0e2830;
+  font-size: 20px;
+}
+
+.spec__content__text .highlight {
+  color: #51adcb;
+}
+
+.spec__content__button a {
+  background-color: #f57121;
+  display: inline-block;
+  padding: 16px 32px 14px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color .5s ease-out;
+}
+
+.spec__content__button a:hover {
+  background-color: #e05400;
+}
+
+.spec__content__button .emoji {
+  margin-left: 4px;
+  vertical-align: text-top;
+}
+
+/* ---------- servicies ---------- */
 .services__cards-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -282,7 +271,6 @@ h2 > span {
 
 /* ---------- footer ---------- */
 .footer {
-  height: 64px;
   line-height: 64px;
   color: #b1b1b1;
 }
@@ -296,6 +284,7 @@ h2 > span {
   font-size: 14px;
   font-weight: 300;
   padding-top: 8px;
+  display: flex;
 }
 
 .footer-right__icons {
@@ -303,9 +292,34 @@ h2 > span {
 }
 
 .footer-right__icons li {
-  margin: 0 8px;
+  margin: 0 14px;
 }
 
 .footer-right__icons img {
   width: 32px;
+}
+
+.footer-right__language-btn {
+  color: #979797;
+  border: 1px solid #b1b1b1;
+  height: 30px;
+  padding: 0 10px 0 8px;
+  border-radius: 25px;
+  margin-top: 2px;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.footer-right__language-btn img {
+  width: 20px;
+  vertical-align: sub;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 600px) {
 }
