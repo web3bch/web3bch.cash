@@ -10,20 +10,21 @@ body {
 
 h2 {
   text-align: center;
-  margin: 0 0 30px 0;
-  font-size: 50px;
-  font-weight: 300;
-  color: #444;
-  position: relative;
-  padding-bottom: 20px;
-  line-height: 1.5;
+  margin: 0 0 36px 0;
+  font-size: 48px;
+  font-weight: bold;
+  color: #51adcb;
+}
+
+h2 > span {
+  color: #fb7626;
 }
 
 /* ---------- header ---------- */
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  top: 0;
+  top: 32px;
   height: 60px;
   width: 100%;
   color: #fff;
@@ -36,6 +37,15 @@ h2 {
   justify-content: space-between;
 }
 
+.header-left__logo {
+  width: 160px;
+  padding-top: 20px;
+}
+
+.header-left__logo img {
+  width: 100%;
+}
+
 .header-right {
   display: flex;
 }
@@ -46,8 +56,10 @@ h2 {
 }
 
 .header-right__sections li {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   margin: 0 20px;
+  cursor: pointer;
 }
 
 .header-right__language-btn {
@@ -55,9 +67,10 @@ h2 {
   height: 30px;
   padding: 2px 12px;
   border-radius: 25px;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: 16px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .header-right__language-btn img {
@@ -69,42 +82,57 @@ h2 {
 /* ---------- jumbotron ---------- */
 .jumbotron {
   position: relative;
-  background-color: #51adcb;
-  height: 560px;
+  background-color: #fff;
+  height: 100vh;
 }
 
-.jumbotron__heading {
+.jumbotron-inner {
+  background-color: #51adcb;  
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+/* .jumbotron__heading {
   position: absolute;
   bottom: -17px;
   left: -6px;
   font-size: 160px;
   font-weight: bold;
   color: #fff;
-}
+} */
 
-.jumbotron__center {
+.jumbotron__content {
   position: absolute;
-  top: 220px;
+  top: 240px;
   left: 0;
   right: 0;
 }
 
-.jumbotron__center-inner {
-  max-width: 980px;
+.jumbotron__content-inner {
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 }
 
-.jumbotron__center__catchphrase {
+.jumbotron__content__catchphrase {
   color: #fff;
-  font-size: 24px;
-  line-height: 60px;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: bold;
 }
 
-.jumbotron__center__spec-btn a {
+.jumbotron__content__spec-btn {
+  position: relative;
+  margin-top: 52px;
+}
+
+.jumbotron__content__spec-btn a {
+  position: absolute;
+  right: 0;
   background-color: #f57121;
-  display: block;
+  display: inline-block;
   padding: 20px 40px;
   color: #fff;
   text-decoration: none;
@@ -114,17 +142,90 @@ h2 {
   transition: background-color .5s ease-out;
 }
 
-.jumbotron__center__spec-btn a:hover {
+.jumbotron__content__spec-btn a:hover {
   background-color: #da6c29;
 }
 
+.jumbotron__scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.jumbotron__scroll__text {
+  position: absolute;
+  left: -28px;
+  font-size: 16px;
+}
+
+.jumbotron__scroll-inner {
+  position: relative;
+  width: 1px;
+  height: 120px;
+  margin: auto;
+}
+
+.jumbotron__scroll__bar-clip {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 80px;
+  top: 40px;
+  background-color: #efefef;
+  margin: auto;
+}
+
+.jumbotron__scroll__bar {
+  position: absolute;
+  width: 1px;
+  height: 80px;
+  top: -80px;
+  right: 0;
+  background-color: #000;
+  -webkit-animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+  animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+@keyframes scroll-bar {
+  0%, 5% {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,160px,0);
+    transform: translate3d(0,160px,0);
+  }
+}
+
 /* ---------- about ---------- */
+.about {
+  background-color: #fff;
+  padding: 60px 0 80px;
+}
+
+.about__text-card {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  padding: 48px 80px;
+  max-width: 640px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e2830;
+  line-height: 1.5;
+}
 
 /* ---------- wallets ---------- */
 
 /* ---------- servicies ---------- */
 .services {
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 60px 0;
 }
 
@@ -132,6 +233,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 20px 0;
 }
 
 .services__card {
