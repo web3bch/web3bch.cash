@@ -37,4 +37,9 @@ $(function(){
     var btnTop = (window.innerHeight - 20) * Math.min(scrollRate, 1)
     $("#scroll-button").css({top: btnTop});
   })
+
+  $("#header-list li").click((e) => {
+    const id = $(e.target).attr("data-id")
+    $("html,body").animate({scrollTop:$('#' + id).offset().top});
+  })
 })
