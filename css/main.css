@@ -325,6 +325,56 @@ section {
   margin-top: 5px;
 }
 
+.footer-xs {
+  display: none;
+  color: #b1b1b1;
+  text-align: center;
+}
+
+.footer-xs__language-btn {
+  display: inline-block;
+  color: #979797;
+  border: 1px solid #b1b1b1;
+  height: 30px;
+  padding: 0 10px 0 8px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: normal;
+  margin-bottom: 36px;
+}
+
+.footer-xs__language-btn img {
+  width: 20px;
+  vertical-align: sub;
+  margin-top: 5px;
+}
+
+.footer-xs__language-btn img {
+  width: 20px;
+  vertical-align: sub;
+  margin-top: 5px;
+}
+
+.footer-xs__icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.footer-xs__icons li {
+  margin: 0 14px;
+}
+
+.footer-xs__icons img {
+  width: 32px;
+}
+
+.footer-xs__copy {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
 @media screen and (max-width: 960px) {
   h2 {
     margin-bottom: 36px;
@@ -359,4 +409,89 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .scroll-button {
+    display: none;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .header-left__logo {
+    padding: 0;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .jumbotron-inner {
+    top: 16px;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .jumbotron__content {
+    padding: 0 20px;
+  }
+
+  .jumbotron__content__catchphrase {
+    font-size: 18px;
+  }
+
+  .about {
+    padding-top: 60px;
+  }
+
+  .about__text {
+    padding: 20px 0;
+  }
+
+  .spec__content {
+    display: block;
+    padding: 32px 0 0;
+  }
+
+  .spec__content__button {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .spec__content__button a {
+    font-size: 19px;
+    padding: 18px 16px 16px 18px;
+  }
+
+  .services {
+    padding-bottom: 40px;
+  }
+
+  .services__card {
+    width: 47%;
+    justify-content: space-between;
+    margin: 0 0 36px;
+  }
+
+  .services__card:nth-child(2n) {
+    margin-left: 6%;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .footer-xs {
+    display: block;
+  }
 }
