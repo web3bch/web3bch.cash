@@ -118,13 +118,29 @@ section {
 .jumbotron__content-inner {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
-.jumbotron__content__catchphrase {
+.jumbotron__content__text {
   color: #fff;
   font-size: 28px;
-  line-height: 1.6;
+  line-height: 1.2;
   font-weight: bold;
+  opacity: 0;
+}
+
+.jumbotron__content__text > div {
+  display: inline-block;
+  min-width: 18px;
+  padding-right: 4px;
+  margin-bottom: 14px;
+  border-right: 6px solid;
+  animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #fb7626; }
 }
 
 .jumbotron__scroll {
@@ -393,7 +409,7 @@ section {
     padding-right: 0;
   }
 
-  .jumbotron__content__catchphrase {
+  .jumbotron__content__text {
     font-size: 24px;
   }
 
@@ -446,7 +462,7 @@ section {
     padding: 0 20px;
   }
 
-  .jumbotron__content__catchphrase {
+  .jumbotron__content__text {
     font-size: 18px;
   }
 
@@ -474,7 +490,7 @@ section {
   }
 
   .services {
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
 
   .services__card {
