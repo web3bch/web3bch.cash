@@ -1,0 +1,16 @@
+update services
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch feature/update-services
+# Changes to be committed:
+#	modified:   css/main.css
+#	new file:   images/dappsbrowser.svg
+#	new file:   images/img_coming_soon.svg
+#	new file:   images/logo_web3bch.png
+#	deleted:    images/yenom.png
+#	new file:   images/yenom.svg
+#	new file:   images/yenom2.svg
+#	new file:   images/yenomforweb.svg
+#	modified:   index.html
+#	modified:   js/main.js
+#

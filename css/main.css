@@ -1,5 +1,5 @@
 body {
-  font-family: 'Amiko', sans-serif;
+  font-family: 'Amiko', "Avenir Next", "YuGothic", "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -87,9 +87,9 @@ section {
   border-radius: 30px;
 }
 
-.header-right__sections li:nth-child(2) {
+/* .header-right__sections li:nth-child(2) {
   background-color: #fb7626;
-}
+} */
 
 /* ---------- jumbotron ---------- */
 .jumbotron {
@@ -99,7 +99,7 @@ section {
 }
 
 .jumbotron-inner {
-  background-color: #51adcb;  
+  background-color: #51adcb;
   position: absolute;
   top: 20px;
   bottom: 20px;
@@ -154,15 +154,16 @@ section {
 
 .jumbotron__scroll__text {
   position: absolute;
-  left: -28px;
+  left: -32px;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .jumbotron__scroll-inner {
   position: relative;
   width: 1px;
-  height: 120px;
+  height: 140px;
   margin: auto;
 }
 
@@ -170,7 +171,7 @@ section {
   position: absolute;
   overflow: hidden;
   width: 1px;
-  height: 80px;
+  height: 100px;
   top: 40px;
   background-color: #efefef;
   margin: auto;
@@ -179,18 +180,18 @@ section {
 .jumbotron__scroll__bar {
   position: absolute;
   width: 1px;
-  height: 80px;
-  top: -80px;
+  height: 100px;
+  top: -100px;
   right: 0;
   background-color: #000;
-  -webkit-animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
-  animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+  -webkit-animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
+  animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
 
 @keyframes scroll-bar {
-  0%, 5% {
+  0%, 10% {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
@@ -283,7 +284,7 @@ section {
 .services__card a {
   display: inline-block;
   height: 120px;
-  padding: 32px;
+  padding:  32px;
   box-sizing: border-box;
   line-height: 90px;
 }
@@ -416,9 +417,9 @@ section {
   .services__card {
     margin-left: 3.5%;
     margin-right: 3.5%;
-    width: 26.33%;    
+    width: 26.33%;
   }
-  
+
   .services__card a {
     line-height: 75px;
   }

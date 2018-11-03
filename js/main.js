@@ -17,7 +17,7 @@ $(function(){
       let timeout = 70
       const $el = $(children[line])
       const text = texts[line]
-      $el.text($el.text() + text[index])
+      $el.text($el.text() + texts[index])
       index++
       if (text.length === index) {
         line++
@@ -43,3 +43,16 @@ $(function(){
     $("html,body").animate({scrollTop:$('#' + id).offset().top});
   })
 })
+
+// スクロールボタンをクリックしたときのアニメーション
+$('.jumbotron__scroll__text').click(function() {
+  var height
+  if (window.innerWidth > 960) {
+    height = window.innerHeight - 20
+  } else if (window.innerWidth > 600) {
+    height = 640 - 20
+  } else {
+    height = 600
+  }
+  $('html, body').animate({scrollTop: height}, 800, 'easeOutCubic');
+});
