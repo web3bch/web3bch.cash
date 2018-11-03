@@ -17,7 +17,7 @@ $(function(){
       let timeout = 70
       const $el = $(children[line])
       const text = texts[line]
-      $el.text($el.text() + texts[index])
+      $el.text($el.text() + text[index])
       index++
       if (text.length === index) {
         line++
@@ -30,21 +30,21 @@ $(function(){
       setTimeout(insertText, timeout)
     }
     setTimeout(insertText, 500)
-  })
+  });
 
   $(window).scroll(() => {
     var scrollRate = $(this).scrollTop() / ($("body").height() - window.innerHeight)
     var btnTop = (window.innerHeight - 20) * Math.min(scrollRate, 1)
     $("#scroll-button").css({top: btnTop});
-  })
+  });
 
   $("#header-list li").click((e) => {
     const id = $(e.target).attr("data-id")
     $("html,body").animate({scrollTop:$('#' + id).offset().top});
   })
-})
+});
 
-// スクロールボタンをクリックしたときのアニメーション
+// `SCROLL`をクリックしたときのアニメーション
 $('.jumbotron__scroll__text').click(function() {
   var height
   if (window.innerWidth > 960) {
