@@ -89,6 +89,25 @@ section {
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 30px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header-right__sections li::after {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  content: '';
+  width: 72%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+.header-right__sections li:hover::after {
+  transform: scale(1, 1);
 }
 
 /* .header-right__sections li:nth-child(2) {
@@ -167,7 +186,7 @@ section {
 .jumbotron__scroll-inner {
   position: relative;
   width: 1px;
-  height: 140px;
+  height: 120px;
   margin: auto;
 }
 
@@ -175,23 +194,28 @@ section {
   position: absolute;
   overflow: hidden;
   width: 1px;
-  height: 100px;
+  height: 80px;
   top: 40px;
-  background-color: #efefef;
+  background-color: #fff;
   margin: auto;
 }
 
 .jumbotron__scroll__bar {
   position: absolute;
   width: 1px;
-  height: 100px;
-  top: -100px;
+  height: 80px;
+  top: -80px;
   right: 0;
   background-color: #000;
   -webkit-animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
   animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+.noline {
+  color:  #fff;
+  text-decoration:none
 }
 
 @keyframes scroll-bar {
