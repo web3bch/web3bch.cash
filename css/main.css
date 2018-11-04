@@ -307,7 +307,7 @@ section {
 .services__card a {
   display: inline-block;
   height: 120px;
-  padding:  32px;
+  padding: 32px;
   box-sizing: border-box;
   line-height: 90px;
 }
