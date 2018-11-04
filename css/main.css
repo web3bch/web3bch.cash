@@ -1,8 +1,12 @@
 body {
-  font-family: 'Amiko', sans-serif;
+  font-family: 'Amiko', "Avenir Next", "YuGothic", "游ゴシック体", "メイリオ", "Meiryo", sans-serif;
 }
 
 ::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-pc {
   display: none;
 }
 
@@ -85,11 +89,30 @@ section {
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 30px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.header-right__sections li:nth-child(2) {
-  background-color: #fb7626;
+.header-right__sections li::after {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  content: '';
+  width: 72%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
 }
+.header-right__sections li:hover::after {
+  transform: scale(1, 1);
+}
+
+/* .header-right__sections li:nth-child(2) {
+  background-color: #fb7626;
+} */
 
 /* ---------- jumbotron ---------- */
 .jumbotron {
@@ -99,7 +122,7 @@ section {
 }
 
 .jumbotron-inner {
-  background-color: #51adcb;  
+  background-color: #51adcb;
   position: absolute;
   top: 20px;
   bottom: 20px;
@@ -154,9 +177,10 @@ section {
 
 .jumbotron__scroll__text {
   position: absolute;
-  left: -28px;
+  left: -32px;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .jumbotron__scroll-inner {
@@ -172,7 +196,7 @@ section {
   width: 1px;
   height: 80px;
   top: 40px;
-  background-color: #efefef;
+  background-color: #fff;
   margin: auto;
 }
 
@@ -183,14 +207,14 @@ section {
   top: -80px;
   right: 0;
   background-color: #000;
-  -webkit-animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
-  animation: scroll-bar 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+  -webkit-animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
+  animation: scroll-bar 4s cubic-bezier(.455,.03,.515,.955) infinite;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
 
 @keyframes scroll-bar {
-  0%, 5% {
+  0%, 10% {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
@@ -416,9 +440,9 @@ section {
   .services__card {
     margin-left: 3.5%;
     margin-right: 3.5%;
-    width: 26.33%;    
+    width: 26.33%;
   }
-  
+
   .services__card a {
     line-height: 75px;
   }
