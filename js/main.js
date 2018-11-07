@@ -12,7 +12,7 @@ $(function(){
     let index = 0;
     const insertText = () => {
       if (line > 0 && index === 0) {
-        $(children[line - 1]).css({animation: "none", borderColor: "transparent"})
+        $(children[line - 1]).css({animation: "none", border: 0})
       }
       let timeout = 50
       const $el = $(children[line])
@@ -22,7 +22,7 @@ $(function(){
       if (text.length === index) {
         line++
         index = 0
-        timeout += 700
+        timeout += line < 3 ? 700 : 0
       }
       if (line === texts.length) {
         return

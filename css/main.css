@@ -6,7 +6,7 @@ body {
   display: none;
 }
 
-.hidden-pc {
+.show-xs {
   display: none;
 }
 
@@ -150,6 +150,7 @@ section {
   line-height: 1.2;
   font-weight: bold;
   opacity: 0;
+  letter-spacing: 1px;
 }
 
 .jumbotron__content__text > div {
@@ -449,6 +450,10 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  .show-xs {
+    display: block;
+  }
+
   h2 {
     font-size: 28px;
     text-align: left;
@@ -483,11 +488,16 @@ section {
   }
 
   .jumbotron__content {
-    padding: 0 20px;
+    padding: 0 32px;
+    top: 220px;
   }
 
   .jumbotron__content__text {
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .jumbotron__content__text > div:last-child {
+    padding-left: 20px;
   }
 
   .about {
