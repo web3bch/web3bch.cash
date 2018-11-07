@@ -150,7 +150,7 @@ section {
   line-height: 1.2;
   font-weight: bold;
   opacity: 0;
-  letter-spacing: 1px;
+  letter-spacing: .8px;
 }
 
 .jumbotron__content__text > div {
@@ -488,7 +488,7 @@ section {
   }
 
   .jumbotron__content {
-    padding: 0 32px;
+    padding: 0 0 0 32px;
     top: 220px;
   }
 
